@@ -1,0 +1,35 @@
+group 'name.lech.pojomapper'
+version '0.1-SNAPSHOT'
+
+apply plugin: 'idea'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+ext {
+    roasterVersion = "2.20.1.Final"
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs += "${projectDir}/generated-src/main/java"
+        }
+    }
+}
+idea {
+    module {
+        generatedSourceDirs += file("${projectDir}/generated-src/main/java")
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile group: 'org.jboss.forge.roaster', name: 'roaster-api', version: "${roasterVersion}"
+    runtime group: 'org.jboss.forge.roaster', name: 'roaster-jdt', version: "${roasterVersion}"
+}
