@@ -12,6 +12,7 @@ ext {
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 sourceSets {
@@ -32,4 +33,7 @@ dependencies {
 
     compile group: 'org.jboss.forge.roaster', name: 'roaster-api', version: "${roasterVersion}"
     runtime group: 'org.jboss.forge.roaster', name: 'roaster-jdt', version: "${roasterVersion}"
+
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.22.0'
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.11.1'
 }

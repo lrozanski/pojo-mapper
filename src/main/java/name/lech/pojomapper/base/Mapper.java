@@ -1,4 +1,4 @@
-package name.lech.pojomapper;
+package name.lech.pojomapper.base;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.List;

@@ -1,4 +1,4 @@
-package name.lech.pojomapper;
+package name.lech.pojomapper.base;
 
 final class ReflectionHelper {
 
